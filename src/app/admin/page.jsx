@@ -1,6 +1,5 @@
 "use client"
 import Image from 'next/image';
-import { Geist, Geist_Mono } from "next/font/google";
 import MapClient from '@/layers/map';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -84,23 +83,28 @@ const ADMIN = () => {
         }
     }
     return (
-        <div className="w-[100%] h-[100%] text-[#000] flex flex-row bg-gray-100">
-            <div style={{backgroundImage:"radial-gradient(circle,rgba(235, 172, 96, 1) 0%, rgba(201, 151, 107, 1) 50%, rgba(237, 206, 83, 0.92) 100%)"}} className="w-[20%] h-[100%] flex flex-col">
+        <div className="w-[100%] h-[100%] text-[#000] flex flex-row bg-[linear-gradient(#fdfcfb,#e2d1c3,#e2d1c3)]">
+            <div className="w-[20%] bg-[linear-gradient(#181C14,#0C0C0C)] border-r-[2px] border-[#fff] text-[#4E6688] h-[100%] flex flex-col">
                 <Image src={"/logo.png"} alt="Logo" width={200} height={200} className="mb-4 h-[10%] w-[100%]" />
                 <h1 className="text-white text-2xl font-bold">Admin</h1>
-                <Link
+                <Link 
                     href="/admin"
-                    className="text-white w-[100%] border-b-[#000] border-b-[1px] h-[60px] text-lg mt-2 hover:underline"
+                    className="border-[#fff] border-b-[2px] backdrop-blur-md rounded-[2px] ml-[1%] w-[98%] h-[40px] text-lg mt-4 hover:underline"
                 >
                     add institution
                 </Link>
                 <Link
                     href="/admin/student"
-                    className="text-white w-[100%]  border-b-[#000] border-b-[1px] h-[60px] text-lg mt-2 hover:underline"
+                    className="border-[#fff] border-b-[2px] w-[98%] ml-[1%] backdrop-blur-md rounded-[2px] h-[40px] text-lg mt-2 hover:underline"
                 >
                     add student
                 </Link>
-                
+                <Link
+                    href="/admin/reports"
+                    className="border-[#fff] border-b-[2px] w-[98%] ml-[1%] backdrop-blur-md rounded-[2px] h-[40px] text-lg mt-2 hover:underline"
+                >
+                    view reports
+                </Link>
             </div>
             
             <div className="w-[80%] h-[100%] flex flex-row">
@@ -109,7 +113,7 @@ const ADMIN = () => {
                 </div>
                 
                 
-                <div className="bg-white p-8 rounded-lg shadow-lg w-[40%]">
+                <div className="bg-white p-8 rounded-lg shadow-lg w-[40%] overflow-auto">
                     <form className="flex flex-col space-y-4">
                         <label>
                             <h1 className="text-black text-4xl font-bold mb-4">Add Institution</h1>
@@ -142,7 +146,7 @@ const ADMIN = () => {
                             ADD
                         </button>
                     </form>
-                    <div className='w-[100%] h-[100%] mt-8 overflow-auto'>
+                    <div className='w-[100%] mt-8'>
                         <h2 className="text-black text-2xl font-bold mb-4">Institutions</h2>
                         {institutions && institutions.length > 0 ? (
                             <div className="w-[100%]">

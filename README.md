@@ -37,3 +37,10 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 # carbonIQ
 WASTE MANAGEMENT SYSTEM
+
+# get started
+
+- Start with get started
+- Create admin user
+- Create institution
+- Create students
