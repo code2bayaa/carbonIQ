@@ -97,7 +97,7 @@ export default function RegisterPage() {
               onChange={(e) => update('role', e.target.value)}
               className="text-[#000] mt-1 block w-full rounded-md border border-slate-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
             >
-              <option value="student">student</option>
+              {/* <option value="student">student</option> */}
               <option value="staff">staff</option>
               <option value="admin">admin</option>
               <option value="admin">collector</option>

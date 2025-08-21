@@ -50,10 +50,10 @@ const ADMIN = () => {
     const submitInstitution = async (e) => {
         e.preventDefault();
         try {
-            // if(!form.name || coord.lat === 0 || coord.lng === 0) {
-            //     alert('Please fill in all fields and select a location on the map.');
-            //     return;
-            // }
+            if(!form.name || coord.lat === 0 || coord.lng === 0) {
+                alert('Please fill in all fields and select a location on the map.');
+                return;
+            }
             const response = await fetch(process.env.NEXT_PUBLIC_BACKEND_URL + '/institutions/', {
                 method: 'POST',
                 headers: {
